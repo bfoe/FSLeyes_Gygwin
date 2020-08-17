@@ -8,18 +8,20 @@ under Windows using **Cygwin** (https://www.cygwin.com)
 - from Windows execute the following command: \
   (either paste this into Windows Start Menu search, or use a Windows command shell)
 ```
-      %HOMEPATH%\Downloads\setup-x86_64.exe -q -P wget
+   %HOMEPATH%\Downloads\setup-x86_64.exe -q -P wget
 ```
 &emsp; when the Installer Window opens, choose your prefered Download Site from the list \
 &emsp; In the following two windows that open just hit the "Next" botton and at the end "Finish" 
 - from the Windows Startup Menu (or the Desktop Shortcut) open a Cygwin64 Terminal
 - inside the Cygwin Terminal Window execute the following commands
 ```
-      wget https://raw.githubusercontent.com/bfoe/FSLeyes_Gygwin/master/Setup_FSLeyes.sh
-      chmod +x Setup_FSLeyes.sh
-      . ./Setup_FSLeyes.sh
+   wget https://raw.githubusercontent.com/bfoe/FSLeyes_Gygwin/master/Setup_FSLeyes.sh
+   chmod +x Setup_FSLeyes.sh
+   . ./Setup_FSLeyes.sh
 ```
 &emsp; this will automatically download and install all required packages
+
+##
 
 ### Run FSLeyes
 - either simply run the provided script as "**./RUN_FSLeyes.sh**"
@@ -40,17 +42,17 @@ for those who want to install FSLeyes from scratch compiling source code ...
 - FSLeyes integrates with FSL, which is not yet available under Cygwin
 - Warning message (hidden when running from the script)
 ```
-      "(fsleyes:235): Warning : Error retrieving accessibility bus address: org.freedesktop.DBus.Error.NoReply:
-      Message recipient disconnected from message bus without replying
+   Warning: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.NoReply
+   Message recipient disconnected from message bus without replying
 ```
 &emsp; this may be the reason why each time fsleyes is run it leave a process "dbus-deamon.exe" running \
 &emsp; when running fsleyes manually this can be killed from the Windows task manager 
 - Error message (hidden when running from the script) \
   Upon exit fsleyes displays a message related to Python threading
 ```
-      File /usr/local/lib/python3.8/site-packages/fsleyes/filtermain.py,
-      line 112, in read_loop line = fin.readline()
-      OSError: [Errno 9] Bad file descriptor
+   File /usr/local/lib/python3.8/site-packages/fsleyes/filtermain.py,
+   line 112, in read_loop line = fin.readline()
+   OSError: [Errno 9] Bad file descriptor
 ```
 
 ##
