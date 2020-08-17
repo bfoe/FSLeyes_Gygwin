@@ -1,5 +1,38 @@
 #!/bin/sh
 
+# test if blas/lapac is reachable
+s=cygblas-0.dll
+if ! which $s 2>/dev/null | grep "$s" >/dev/null
+then
+  echo "can't find $s"
+  echo "this might due to a missing '/usr/lib/lapack' entry in the PATH"
+  echo "close this cygwin terminal, reopen, and try again" 
+  echo "if everything fails you may have to reinstall cygwin"
+  echo "sorry, aborting script"
+  exit -1
+fi
+s=cyglapack-0.dll
+if ! which $s 2>/dev/null| grep "$s" >/dev/null
+then
+  echo "can't find $s"
+  echo "this might due to a missing '/usr/lib/lapack' entry in the PATH"
+  echo "close this cygwin terminal, reopen, and try again" 
+  echo "if everything fails you may have to reinstall cygwin"
+  echo "sorry, aborting script"  
+  exit -1
+fi
+# test if windows OpenGL dll is reachable
+s=glu32.dll 
+if ! which $s 2>/dev/null| grep "$s" >/dev/null
+then
+  echo "can't find $s"
+  echo "this might due to a missing '/cygdrive/c/Windows/system32' entry in the PATH"
+  echo "close this cygwin terminal, reopen, and try again" 
+  echo "if everything fails you may have to reinstall cygwin"
+  echo "sorry, aborting script"  
+  exit -1
+fi
+
 # start XWin server if not running already
 if ps | grep XWin >/dev/null
 then

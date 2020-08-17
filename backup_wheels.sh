@@ -3,7 +3,7 @@
 BCK_PATH=~/.cache      #path from where to backup
 BCK_EXT=whl            #extension of files to backup
 DEST_PATH=~/backuped   #path where to save backup files
-tempscript=.temp.sh  #name of temporary helper script
+tempscript=.temp.sh    #name of temporary helper script
 
 mkdir $DEST_PATH 2>/dev/null
 echo "#!/bin/sh" >$tempscript
