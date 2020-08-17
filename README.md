@@ -10,8 +10,8 @@ under Windows using **Cygwin** (https://www.cygwin.com)
 ```
    %HOMEPATH%\Downloads\setup-x86_64.exe -q -P wget
 ```
-&emsp; when the Installer Window opens, choose your prefered Download Site from the list \
-&emsp; In the following two windows that open just hit the "Next" botton and at the end "Finish" 
+&emsp;&emsp; when the Installer Window opens, choose your prefered Download Site from the list \
+&emsp;&emsp; In the following two windows that open just hit the "Next" botton and at the end "Finish" 
 - from the Windows Startup Menu (or the Desktop Shortcut) open a Cygwin64 Terminal
 - inside the Cygwin Terminal Window execute the following commands
 ```
@@ -19,7 +19,7 @@ under Windows using **Cygwin** (https://www.cygwin.com)
    chmod +x Setup_FSLeyes.sh
    . ./Setup_FSLeyes.sh
 ```
-&emsp; this will automatically download and install all required packages
+&emsp;&emsp; this will automatically download and install all required packages
 
 ##
 
@@ -45,8 +45,6 @@ for those who want to install FSLeyes from scratch compiling source code ...
    Warning: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.NoReply
    Message recipient disconnected from message bus without replying
 ```
-&emsp; this may be the reason why each time fsleyes is run it leave a process "dbus-deamon.exe" running \
-&emsp; when running fsleyes manually this can be killed from the Windows task manager 
 - Error message (hidden when running from the script) \
   Upon exit fsleyes displays a message related to Python threading
 ```
